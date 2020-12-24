@@ -17,7 +17,7 @@ elif data - ano <=14:
     print('O atleta {} foi classificado na categoria {}'.format(nome.capitalize(),categorias[1]))
 elif data - ano <=19:
     print('O atleta {} foi classificado na categoria {}'.format(nome.capitalize(),categorias[2]))
-elif data - ano <=20:
+elif data - ano <=25:
     print('O atleta {} foi classificado na categoria {}'.format(nome.capitalize(),categorias[3]))
 else:
     print('O atleta {} foi classificado na categoria {}'.format(nome.capitalize(),categorias[4]))

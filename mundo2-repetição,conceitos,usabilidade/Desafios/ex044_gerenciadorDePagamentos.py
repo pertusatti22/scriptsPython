@@ -8,7 +8,14 @@ print('Agora selecione a condição de pagamento:')
 while not repetidor:
     codigosPagamento = ['A','B','C','D']    
     print('Cód | Forma de Pagamento\n {}  | Dinheiro ou Débito\n {}  | à Vista no Cartão\n {}  | até 2x no Cartão\n {}  | 3 ou + vezes no Cartão'.format(codigosPagamento[0],codigosPagamento[1],codigosPagamento[2],codigosPagamento[3]))
-    condicaoPagamento = str(input('Digite ao lado o código da forma de pagamento e confirme apertando "ENTER": '))
+    pagamento = False
+    while not pagamento:
+        condicaoPagamento = str(input('Digite ao lado o código da forma de pagamento e confirme apertando "ENTER": ')).upper()
+        if not condicaoPagamento in codigosPagamento:
+            print('Condição de pagamento inválida!')
+            pagamento = False
+        else:
+            break
     if condicaoPagamento.lower() == 'a':
         condicaoPagamento = 0
     elif condicaoPagamento.lower() == 'b':
@@ -42,7 +49,7 @@ elif condicaoPagamento == 1:
 if condicaoPagamento == 2:
     print('Ao pagar com {}, o preço final é de R${:.2f}, em 2 vezes no cartão, com parcelas no valor de {:.2f}'.format(codigosPagamento[condicaoPagamento], precoDoProduto, (precoDoProduto/2)))
 if condicaoPagamento == 3:
-    print('Ao pagar com {}, o preço final é de R${:.2f}, em {} vezes no cartão, com parcelas no valor de {:.2f}'.format(codigosPagamento[condicaoPagamento], (precoDoProduto*1.2), parcelas, (precoDoProduto/parcelas)))
+    print('Ao pagar com {}, o preço final é de R${:.2f}, em {} vezes no cartão, com parcelas no valor de {:.2f}'.format(codigosPagamento[condicaoPagamento], (precoDoProduto*1.2), parcelas, ((precoDoProduto*1.2)/parcelas)))
 print('-='*20)
 print('Fim do Programa')
 print('-='*20)

@@ -3,7 +3,7 @@ print('Índice de Massa Corporal')
 print('-='*20)
 peso = float(input('Insira o seu peso em quilogramas: '))
 altura = float(input('Insira a sua altura em metros: '))
-imc = peso/altura/altura
+imc = peso / (altura ** 2)
 if imc < 18.5:
     print('IMC: {:.2f}. Você está abaixo do peso adequado!'.format(imc))
 elif imc >=18.5 and imc < 25:
