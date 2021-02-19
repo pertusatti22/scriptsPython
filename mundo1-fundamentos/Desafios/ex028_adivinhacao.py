@@ -1,3 +1,4 @@
+
 from random import randint
 computador = randint(0, 5)
 print ('\033[1;31;40m-=-\033[m' * 20)
@@ -8,4 +9,5 @@ if jogador == computador:
     print('PARABÉNS! Você conseguiu me vencer!')
 else:
     print('GANHEI! Eu pensei no número {} e não no {}!'.format(computador, jogador))
+print('Neste exercício utilizamos cor')
 #depois refatorar adicionando cores no terminal.
